@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name Portfolio</title>
+  <meta name="description" content="Responsive portfolio showcasing projects, skills and contact." />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-900 text-slate-100 antialiased leading-relaxed">
+
+  <!-- NAVBAR -->
+  <header class="fixed w-full z-40">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#hero" class="text-xl font-semibold tracking-tight">My <span class="text-indigo-400">Portfolio</span></a>
+
+      <div class="hidden md:flex gap-6 items-center">
+        <a href="#projects" id="nav" class="hover:text-indigo-300">Projects</a>
+        <a href="#about" id="nav" class="hover:text-indigo-300">About</a>
+        <a href="#skills" id="nav" class="hover:text-indigo-300">Skills</a>
+        <a href="#contact" id="nav" class="hover:text-indigo-300">Contact</a>
+        <button id="themeToggle" id="nav" class="ml-2 px-3 py-1 border rounded-md border-gray-700">🌙</button>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="mobileBtn" class="md:hidden p-2 rounded-md border border-gray-700">
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div id="mobileMenu" class="md:hidden bg-gray-900/80 glass hidden">
+      <div class="px-6 py-6 flex flex-col gap-4">
+        <a href="#projects" class="block">Projects</a>
+        <a href="#about" class="block">About</a>
+        <a href="#skills" class="block">Skills</a>
+        <a href="#contact" class="block">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="min-h-screen flex items-center" style="padding-top:88px; position: static;top:0;left:0;">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 id="nm" class="text-4xl md:text-6xl font-bold leading-tight">Hi, I’m <span class="text-indigo-400">Silu
+            Mallik</span></h1>
+        <p id="mp" class="mt-4 text-lg text-gray-300 max-w-xl">I build modern, responsive web interfaces and delightful
+          user
+          experiences. I work with JavaScript, React, and simple design systems.</p>
+
+        <div class="mt-6 flex gap-3">
+          <a href="#projects" id="bn"
+            class="px-5 py-3 bg-indigo-500 rounded-md text-white shadow hover:bg-indigo-600">See my
+            work</a>
+          <a href="#contact" id="bn" class="px-5 py-3 border border-gray-700 rounded-md">Contact</a>
+        </div>
+
+        <div class="mt-8 flex gap-4 text-gray-400">
+          <!-- Social placeholders -->
+          <a href="#" id="sm" aria-label="GitHub">GitHub</a>
+          <a href="#" id="sm" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" id="sm" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+
+      <div class="mx-auto">
+        <div id="img"
+          class="w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border border-gray-800 bg-gradient-to-b from-indigo-900 to-transparent flex items-center justify-center">
+          <!-- Placeholder image — replace with your own -->
+          <img src="image/silu1.png" alt="Profile" class="object-cover w-full h-full opacity-90" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold">Selected Projects</h2>
+      <p class="text-gray-400 mt-2">A few projects that show my range — click to expand details.</p>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project Card Template -->
+        <article id="ar"
+          class="group bg-gray-800 p-4 rounded-xl border border-gray-800 hover:border-indigo-500 transition-shadow cursor-pointer"
+          tabindex="0" data-title="Project One" data-desc="A short description of Project One. Built with HTML/CSS/JS."
+          data-link="#">
+          <div
+            class="h-40 rounded-md overflow-hidden bg-gradient-to-br from-indigo-700 to-indigo-900 flex items-center justify-center text-white">
+            Project 1</div>
+          <h3 class="mt-4 font-semibold">Project One</h3>
+          <p class="mt-2 text-sm text-gray-400">Short summary of the project and the tech used.</p>
+          <div class="mt-4 flex items-center justify-between text-sm text-gray-400">
+            <span>2025</span>
+            <button class="openProject text-indigo-300">Details →</button>
+          </div>
+        </article>
+
+        <article id="ar"
+          class="group bg-gray-800 p-4 rounded-xl border border-gray-800 hover:border-indigo-500 transition-shadow cursor-pointer"
+          tabindex="0" data-title="Project Two" data-desc="A short description of Project Two. Built with React."
+          data-link="#">
+          <div
+            class="h-40 rounded-md overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 flex items-center justify-center text-white">
+            Project 2</div>
+          <h3 class="mt-4 font-semibold">Project Two</h3>
+          <p class="mt-2 text-sm text-gray-400">A brief description and the problem it solves.</p>
+          <div class="mt-4 flex items-center justify-between text-sm text-gray-400">
+            <span>2024</span>
+            <button class="openProject text-indigo-300">Details →</button>
+          </div>
+        </article>
+
+        <article id="ar"
+          class="group bg-gray-800 p-4 rounded-xl border border-gray-800 hover:border-indigo-500 transition-shadow cursor-pointer"
+          tabindex="0" data-title="Project Three" data-desc="A short description of Project Three. Built with Next.js."
+          data-link="#">
+          <div
+            class="h-40 rounded-md overflow-hidden bg-gradient-to-br from-pink-700 to-pink-900 flex items-center justify-center text-white">
+            Project 3</div>
+          <h3 class="mt-4 font-semibold">Project Three</h3>
+          <p class="mt-2 text-sm text-gray-400">Quick summary and notable features.</p>
+          <div class="mt-4 flex items-center justify-between text-sm text-gray-400">
+            <span>2023</span>
+            <button class="openProject text-indigo-300">Details →</button>
+          </div>
+        </article>
+
+        <!-- Add more project cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 bg-gray-850">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 id="ab" class="text-3xl font-bold">About Me</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div class="md:col-span-2 text-gray-300">
+          <p id="ab">Hello! I'm a frontend developer focused on building accessible, fast and responsive web apps. I enjoy
+            turning complex problems into simple, beautiful interfaces.</p>
+
+          <ul class="mt-4 space-y-2 text-gray-400">
+            <li id="ab">• I love JavaScript, HTML & CSS</li>
+            <li id="ab">• Experience with React, Next.js and Tailwind</li>
+            <li id="ab">• Passion for design systems and performance</li>
+          </ul>
+        </div>
+
+        <div id="abd" class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+          <h3 class="font-semibold">Quick Info</h3>
+          <p class="text-sm text-gray-400 mt-2">Location: Your City — Available for remote work</p>
+          <p class="text-sm text-gray-400">Email: <a href="mailto:you@example.com"
+              class="text-indigo-300">silumallik402@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold">Skills</h2>
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-gray-300">
+        <div id="sk" class="p-4 bg-gray-800 rounded-md">HTML</div>
+        <div id="sk" class="p-4 bg-gray-800 rounded-md">CSS</div>
+        <div id="sk" class="p-4 bg-gray-800 rounded-md">JavaScript</div>
+        <div id="sk" class="p-4 bg-gray-800 rounded-md">React</div>
+        <div id="sk" class="p-4 bg-gray-800 rounded-md">Tailwind</div>
+        <div id="sk" class="p-4 bg-gray-800 rounded-md">Git</div>
+        <div id="sk" class="p-4 bg-gray-800 rounded-md">Design</div>
+        <div id="sk" class="p-4 bg-gray-800 rounded-md">Accessibility</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-bold">Get in touch</h2>
+      <p class="text-gray-400 mt-2">I’m open to freelance & full-time opportunities. Send a message and I’ll reply soon.
+      </p>
+
+      <form id="contactForm" class="mt-6 grid grid-cols-1 gap-4">
+        <input required name="name" placeholder="Your name" class="p-3 rounded-md bg-gray-800 border border-gray-700" />
+        <input required name="email" type="email" placeholder="Email"
+          class="p-3 rounded-md bg-gray-800 border border-gray-700" />
+        <textarea required name="message" rows="5" placeholder="Message"
+          class="p-3 rounded-md bg-gray-800 border border-gray-700"></textarea>
+        <div class="flex items-center gap-4">
+          <button id="send" type="submit" class="px-5 py-3 bg-indigo-500 rounded-md">Send</button>
+          <div id="formMsg" class="text-sm text-green-400 hidden">Message sent (demo)</div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 text-center text-sm text-gray-500">
+    © <span id="year"></span> silu mallik. Built with ❤️ — replace content with your own.
+  </footer>
+
+  <!-- PROJECT MODAL (hidden) -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60">
+    <div class="bg-gray-900 rounded-xl max-w-3xl w-full p-6 border border-gray-800">
+      <div class="flex items-start justify-between">
+        <div>
+          <h3 id="modalTitle" class="text-xl font-semibold">Project Title</h3>
+          <p id="modalDesc" class="text-gray-400 mt-2">Project description</p>
+        </div>
+        <button id="closeModal" class="text-gray-400">✕</button>
+      </div>
+      <div class="mt-4">
+        <a id="modalLink" href="#" target="_blank" class="text-indigo-400">Open project</a>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
+  <script src="script.js"></script>
+</body>
+
+
+</html>

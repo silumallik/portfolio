@@ -1,0 +1,24 @@
+    /* Small extra styling for nice touches */
+    .glass {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(6px);
+    }
+    *{overflow: hidden;}
+    /* Simple smooth fade-in animations */
+    .fade-up {
+      transform: translateY(12px);
+      opacity: 0;
+      transition: all .6s ease;
+    }
+
+    .fade-up.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    #img {
+      overflow: visible;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
